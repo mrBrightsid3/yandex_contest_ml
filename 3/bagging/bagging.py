@@ -7,9 +7,6 @@ class SimplifiedBaggingRegressor:
         self.oob = oob
 
     def _generate_splits(self, data: np.ndarray):
-        """
-        Generate indices for every bag and store in self.indices_list list
-        """
         self.indices_list = []
         data_length = len(data)
         for bag in range(self.num_bags):
